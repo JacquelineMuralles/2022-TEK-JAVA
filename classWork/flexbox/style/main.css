@@ -1,0 +1,20 @@
+/*Menu*/
+.menu_container {
+  display: flex;
+  padding: 20px;
+  background-color: lightblue;
+  font-family: cursive;
+  font-weight: 300;
+  color: white;
+  border: 5px solid darkblue;
+}
+
+.menu_item {
+  flex: 1;
+  border: 3px solid pink;
+}
+
+.more {
+  flex: 2;
+  border: 3px solid purple;
+}
