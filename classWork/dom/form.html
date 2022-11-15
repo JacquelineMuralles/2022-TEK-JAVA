@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    input {
+      margin: 10px
+    }
+    .error-caught {
+      border: 1px solid red;
+    }
+</style>
+<h1>Form Example</h1>
+
+<form onsubmit="mySubmitFunction(event)">
+  First Name <input type="text" name="firstName" id="firstNameId">
+  <br>
+  Last Name <input type="text" name="lastName" id="lastNameId">
+  <br>
+  Phone # <input type="text" name="phone" id="phoneId">
+  <br><br>
+  <button>Submit</button>
+</form>
+
+<script>
+
+   function mySubmitFunction(e) {
+      e.preventDefault();
+      console.log("form submitted");
+
+      let fn = document.getElementById('firstNameId');
+      if(fn.value == "") {
+        fn.classList.add('error-caught');
+      } 
+
+      let ln = document.getElementById('lastNameId');
+      if(ln.value == "") {
+        ln.classList.add('error-caught');
+      }
+
+      let phone = document.getElementById('phoneId');
+      if(!phone.value.match(/[0-9]{3}[-\s\.]*[0-9]{3}[-\s*[0-9]{4}/gm)){
+        phone.classList.add('error-caught');
+      }
+  }
+</script>
+<!-- when the form submits -->
+<!-- make sure the phone number only has numbers and spaces -->
+<!-- make sure the first and last name fields have a value in them -->
+<!-- when there is an error, I want you to change the border color of the input tag to be red -->
+<!-- also, put a red message under the input box giving an error message -->
+</body>
+</html>
