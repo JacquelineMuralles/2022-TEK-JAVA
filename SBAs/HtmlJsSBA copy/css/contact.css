@@ -1,0 +1,32 @@
+body {
+  background-color: #745E58;
+}
+textarea {
+  height: 200px;
+}
+.form-control {
+  background-color: #EBDDD7;
+  border-color: #745E58;
+}
+
+button {
+  height: 50px;
+}
+
+button > p {
+  font-size: 25px;
+}
+
+.contactText {
+  padding: 75px;
+}
+
+.contactForm {
+  padding: 50px;
+}
+.spacing {
+  margin-top: 20px;
+}
+.form-label > p{
+  font-size: 25px;
+}
